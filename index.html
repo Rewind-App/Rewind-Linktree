@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-210468361-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-210468361-3');
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Rewind App</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="icon" href="https://cdn.andrewhenke.com/rewindapp-modified.png" type="image/x-icon"/>
+</head>
+
+<body>
+    <img id="userPhoto" src="https://cdn.andrewhenke.com/rewindapp-modified.png" alt="Rewind App Logo">
+    <script>
+var getOutboundLink = function(url) {
+  gtag('event', 'click', {
+    'event_category': 'outbound',
+    'event_label': url,
+    'transport_type': 'beacon',
+    'event_callback': function(){document.location = url;}
+  });
+}
+</script>
+    <a href="https://www.instagram.com/rewind.app" id="userName">@rewind.app</a>
+	<br>
+		<p id="about">Rewind App - For the people, by the people</p>
+    
+    <div id="links">
+        <a class="link" href="https://linkfree.rewindapp.ca/register.html?utm_source=linkfree&utm_medium=click" target="_blank" onclick="getOutboundLink('https://linkfree.rewindapp.ca/register.html?utm_source=linkfree&utm_medium=click'); return false;"><i class="fas fa-sign-in-alt"></i> Pre-Register for the Alpha Release</a>
+	<a class="link" href="https://instagram.com/rewind.app" target="_blank" onclick="getOutboundLink('https://instagram.com/rewind.app'); return false;"><i class="fa fa-instagram"></i> Follow us on Instagram</a>
+	<a class="link" href="https://t.me/rewindappchat" target="_blank" onclick="getOutboundLink('https://t.me/rewindappchat'); return false;"><i class="fa fa-telegram"></i> Join the Telegram Community</a>
+	<a class="link" href="https://discord.gg/7BRQFcTVRy" target="_blank" onclick="getOutboundLink('https://discord.gg/7BRQFcTVRy'); return false;"><i class="fab fa-discord"></i> Join the Discord Server</a>
+	<a class="link" href="https://shop.rewindapp.ca?utm_source=linkfree&utm_medium=click" target="_blank" onclick="getOutboundLink('https://shop.rewindapp.ca?utm_source=linkfree&utm_medium=click'); return false;"><i class="fas fa-store"></i> Shop Rewind</a>
+	
+    </div>
+
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script  src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Rewind App</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-210468361-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-210468361-3');
+</script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="icon" href="https://cdn.andrewhenke.com/rewindapp-modified.png" type="image/x-icon"/>
+</head>
+
+<body>
+<script>
+var getOutboundLink = function(url) {
+  gtag('event', 'click', {
+    'event_category': 'outbound',
+    'event_label': url,
+    'transport_type': 'beacon',
+    'event_callback': function(){document.location = url;}
+  });
+}
+</script>
+    <img id="userPhoto" src="https://cdn.andrewhenke.com/rewindapp-modified.png" alt="Rewind App Logo">
+    
+    <a href="https://www.instagram.com/rewind.app" id="userName">@rewind.app</a>
+	<br>
+		<p id="about">Rewind App - For the people, by the people</p>
+    
+    <div id="links">
+	<a class="link" href="https://linkfree.rewindapp.ca/index.html?utm_source=linkfree-signup&utm_medium=click" target="_blank" onclick="getOutboundLink('https://linkfree.rewindapp.ca/index.html?utm_source=linkfree-signup&utm_medium=click'); return false;"><i class="fas fa-arrow-alt-circle-left"></i> Back</a>
+    </div>
+    <iframe style="height:1000px;width:100%;border:none;overflow:hidden;" scrolling="no" src="https://alpha.rewindapp.ca/"/>
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="index.js"></script>
+</body>
+</html>
