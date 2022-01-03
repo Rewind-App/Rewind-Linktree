@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Rewind App</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210468361-3"></script>
 <script>
@@ -14,7 +15,6 @@
 
   gtag('config', 'UA-210468361-3');
 </script>
-
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -35,6 +35,15 @@
 
 <body>
 <script>
+jQuery.ajax({
+    url: "https://rewindapp.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-dtzt95/b/3/b0105d975e9e59f24a3230a22972a71a/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?jsI18nTransformer=migrated&locale=en-US&collectorId=899f5966",
+    type: "get",
+    cache: true,
+    dataType: "script"
+});
+</script>
+
+<script>
 var getOutboundLink = function(url) {
   gtag('event', 'click', {
     'event_category': 'outbound',
@@ -45,15 +54,16 @@ var getOutboundLink = function(url) {
 }
 </script>
     <img id="userPhoto" src="https://cdn.andrewhenke.com/rewindapp-modified.png" alt="Rewind App Logo">
-    
     <a href="https://www.instagram.com/rewind.app" id="userName">@rewind.app</a>
 	<br>
-		<p id="about">Rewind App - For the people, by the people</p>
-    
+		<div id="about">
+		<p>Rewind App - For the people, by the people</p>
+		<p>Alpha Version out now!</p>
+    		</div>
     <div id="links">
 	<a class="link" href="https://linkfree.rewindapp.ca/?utm_source=linkfree-signup&utm_medium=click" target="_blank" onclick="getOutboundLink('https://linkfree.rewindapp.ca/?utm_source=linkfree-signup&utm_medium=click'); return false;"><i class="fas fa-arrow-alt-circle-left"></i> Back</a>
     </div>
-    <iframe style="height:1000px;width:100%;border:none;overflow:hidden;" scrolling="no" src="https://alpha.rewindapp.ca/"/>
+    	<iframe style="height:1000px;width:100%;border:none;overflow:hidden;" scrolling="no" src="https://alpha.rewindapp.ca/"/>
     <!-- Javascript -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="index.js"></script>
